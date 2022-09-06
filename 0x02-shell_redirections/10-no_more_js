@@ -1,2 +1,2 @@
 #!/bin/branch
-find -type f -name "*.js" -delete
+find -name "*.js" f -delete
