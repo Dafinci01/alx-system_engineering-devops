@@ -1,14 +1,12 @@
-splays "Best School" 10 times using a while loop.
-#   On the 9th iteration, displays "Hi" before "Best School".
-
-count=0
-
-while [ $count -lt 10 ]
+#!/usr/bin/env bash
+# This script is displaying "Best School" and "Hi"
+x="0"
+while [ $x -lt 10 ]
 do
-  if [ $count -eq 9 ]
-  then
-    echo "Hi"
-  fi
-  echo "Best School"
-  (( count++ ))
+    echo "Best School"
+    if ((x == 8))
+    then
+        echo "Hi"
+    fi
+    x=$((x+1))
 done
