@@ -1,5 +1,5 @@
-#!/bin/env bash 
+#!/usr/bin/env bash 
 
-
+# using ssh to connect with flag -i 
 ssh -i ~/.ssh/school ubuntu@100.25.222.178
 
