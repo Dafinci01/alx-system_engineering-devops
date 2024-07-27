@@ -1,4 +1,4 @@
 #!/usr/bin/env bash 
 
-
-whoami
+#runs the whoami command under the uaer passed argument
+sudo -u "$1" whoami
