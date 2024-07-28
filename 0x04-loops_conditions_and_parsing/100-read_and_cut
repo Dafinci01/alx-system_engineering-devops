@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 #this is a strimgf 
-while IFS=: read username x uid gid comment home shell; do
-	echo "Username: $username"
-	echo "User ID: $uid"
-	echo "Home Directory: $home"
-	echo
+while IFS=':' read -r username x uid homedir x x; do
+	printf '%s:%s:%s\n'"$username" "$uid" "$homedir"
 done < /etc/passwd
