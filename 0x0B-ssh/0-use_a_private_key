@@ -1,5 +1,4 @@
 #!/usr/bin/env bash 
-
-# using ssh to connect with flag -i 
+#this is a script using sssh to connect to webserver 0g
 ssh -i ~/.ssh/school ubuntu@100.25.222.178
 
