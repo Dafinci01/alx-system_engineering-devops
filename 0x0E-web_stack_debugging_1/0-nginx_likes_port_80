@@ -6,8 +6,9 @@ apt-get update
 apt-get install -y nginx
 
 #modify nginmx configuration to listen to port 80 
-sed -i  's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
+rm /etc/nginx/sites-enabled/default
 
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 #restart nginx 
 service nginx restart
