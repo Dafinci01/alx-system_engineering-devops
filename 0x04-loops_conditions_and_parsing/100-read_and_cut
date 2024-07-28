@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#this is a strimgf 
 while IFS=: read username x uid gid comment home shell; do
 	echo "Username: $username"
 	echo "User ID: $uid"
