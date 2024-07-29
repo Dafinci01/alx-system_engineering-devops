@@ -1,4 +1,3 @@
 #!/usr/bin/env bash 
 #digging and sorting data in apache 
-awk '{count[$1,$9]++} END {for (key in count) {split(key, a, ","); printf "%6d %s %s\n", count[key], a[1], a[2] } | sort -nr -k1}' apache-access.log
-
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
