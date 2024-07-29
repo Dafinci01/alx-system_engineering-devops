@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+#tell the story of reading  paswd using while 
+
+
+IFS=":"
+
+while read user_id passwd uid gid gcos home shell; do
+	USERNAME=$(cut -d, -fi <<< "$gcos")
+	GROUP_ID="$gid"
+	HOME_DIRECTORY="$home"
+	COMMAND="$shell"
+	PASSWORD="$passwd"
+	USER_ID_INFO="${gcos#*:}" 
+
+	echo  echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND/SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $USER_ID_INFO"   
+
+done < /etc/passwd
+	
