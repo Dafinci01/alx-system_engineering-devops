@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-
 #tell the story of reading  paswd using while 
-
-
 IFS=":"
 
 while read user_id passwd uid gid gcos home shell; do
