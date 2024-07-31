@@ -1,14 +1,24 @@
 #!/usr/bin/env bash
 # Install nginx, should be listening on port 80
-
+echo -e "updating and installing Nginx.\n"
 sudo apt-get update
 sudo apt-get -y install nginx
 
+echo -e "\n SEtting up some minor stuff \n"
+
+#starting the nginx service 
+sudo service nginx start
+
 # Allow Nginx through the firewall
 sudo ufw allow 'Nginx HTTP'
+#give the user ownnersship to website files for easy editing 
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
 
-# Configure Nginx to serve "Hello World!" at the root
-sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
+#creating new index
+echo -e "Hello World" | dd status=none of=/var/www/html/index.nginx-debian.html
 
 # Restart nginx
 sudo service nginx restart
+
+echo -e "\nCompleted. ✅\n"
