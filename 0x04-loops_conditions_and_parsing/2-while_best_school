@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 
+#;x
+:::
+  This script is displaying "Best School" 10 
 x="0"
 while [ $x -lt 10 ]
 do
