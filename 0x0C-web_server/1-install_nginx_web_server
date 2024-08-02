@@ -19,10 +19,15 @@ sudo chmod -R 755 /var/www
 cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
 
 #creating new index
-echo -e "Hello World" | dd status=none of=/var/www/html/index.nginx-debian.html.bckp
-
+echo -e "<!Doctype html>
+<html>
+<head>
+	<title>Hello World</title>
+<body>
+	<hi>Hello World!</h1>
+</body>
+</html>" | sudo tee /var/www/html/index.html > /dev/null
 
 # Restart nginx
-sudo service nginx restart
-
+sudo service nginx restarti
 echo -e "\nCompleted. ✅\n"
