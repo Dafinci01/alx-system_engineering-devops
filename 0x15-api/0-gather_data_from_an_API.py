@@ -3,6 +3,16 @@
 import requests
 import sys
 
+ """
+    Fetches and displays the TODO list progress for a given employee.
+
+    Parameters:
+    employee_id (int): The ID of the employee whose TODOs are to be fetched.
+
+    Returns:
+    None: This function prints the employee's name and their completed tasks.
+    """
+
 def get_employee_todo_progress(employee_id):
     # Define the API endpoint
     url = f'https://jsonplaceholder.typicode.com/users/{employee_id}/todos'
@@ -41,4 +51,3 @@ if __name__ == "__main__":
         get_employee_todo_progress(employee_id)
     except ValueError:
         print("Please provide a valid integer for employee ID.")
-
