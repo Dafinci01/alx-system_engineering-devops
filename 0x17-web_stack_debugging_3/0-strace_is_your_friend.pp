@@ -1,0 +1,3 @@
+package { 'libmylib':
+  ensure => installed,
+}
