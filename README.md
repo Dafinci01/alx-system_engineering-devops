@@ -81,7 +81,3 @@ Part of the ALX full-stack program, these projects were completed to gain hands-
 ### License
 
 This repository is part of the ALX curriculum and intended for educational purposes. Please attribute original work accordingly.
-
----
-
-Let me know if you'd like to tweak any description or add a usage snippet for a specific project!
